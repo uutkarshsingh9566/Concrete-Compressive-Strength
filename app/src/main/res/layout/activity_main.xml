@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:background="@drawable/imagee"
+    android:layout_centerHorizontal="true"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/back_ground" />
+
+    <ImageButton
+        android:layout_width="208dp"
+        android:layout_height="69dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/cal_new"
+        android:id="@+id/cal_buton"
+        />
+
+    <EditText
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:textColorHint="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="8dp"
+        android:gravity="top"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_above="@id/cal_buton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-204dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:hint="0.0"
+        android:id="@+id/grade"/>
+
+    <EditText
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:textColorHint="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="8dp"
+        android:gravity="top"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:hint="0.0"
+        android:layout_above="@+id/cal_buton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="-235dp"
+        android:id="@+id/upv"/>
+
+    <EditText
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:textColorHint="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="8dp"
+        android:gravity="top"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:hint="0.0"
+        android:layout_above="@+id/cal_buton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="-268dp"
+        android:id="@+id/rebound"/>
+
+    <EditText
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:textColorHint="@color/white"
+        android:paddingTop="0dp"
+        android:paddingBottom="8dp"
+        android:gravity="top"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:hint="0.0"
+        android:layout_above="@+id/cal_buton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="-301dp"
+        android:id="@+id/age"/>
+
+    <TextView
+
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal_buton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="465dp"
+        android:layout_marginBottom="20dp"
+        android:shadowColor="#522B5B"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="6"
+        android:fontFamily="@font/poppins_light"
+        android:text="0.0"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cal_buton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="555dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="20dp"
+        android:fontFamily="@font/poppins_light"
+        android:shadowColor="#522B5B"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="6"
+        android:text="0.0"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
