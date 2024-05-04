@@ -16,12 +16,11 @@
         android:src="@drawable/back_ground" />
 
     <ImageButton
+        android:id="@+id/cal_buton"
         android:layout_width="208dp"
         android:layout_height="69dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/cal_new"
-        android:id="@+id/cal_buton"
-        />
+        android:src="@drawable/cal_new" />
 
     <EditText
         android:layout_width="90dp"
@@ -38,7 +37,8 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="200dp"
         android:hint="0.0"
-        android:id="@+id/grade"/>
+        android:id="@+id/grade"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:layout_width="90dp"
@@ -56,7 +56,8 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="200dp"
         android:layout_marginBottom="-235dp"
-        android:id="@+id/upv"/>
+        android:id="@+id/upv"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:layout_width="90dp"
@@ -74,7 +75,8 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="200dp"
         android:layout_marginBottom="-268dp"
-        android:id="@+id/rebound"/>
+        android:id="@+id/rebound"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:layout_width="90dp"
@@ -92,7 +94,8 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="200dp"
         android:layout_marginBottom="-301dp"
-        android:id="@+id/age"/>
+        android:id="@+id/age"
+        android:background="@android:color/transparent"/>
 
     <TextView
 
