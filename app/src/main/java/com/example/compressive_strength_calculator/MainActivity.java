@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -17,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -28,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
     EditText grade,upv,rebound,age;
     ImageButton predict;
     TextView from, to;
-    String url = "http://127.0.0.1:5000/predict";
+    String url = "http://13.232.91.214//predict";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_main);
 
         setContentView(R.layout.activity_main);
         grade = findViewById(R.id.grade);
@@ -52,9 +56,21 @@ public class MainActivity extends AppCompatActivity {
                             public void onResponse(String response) {
 
                                 try {
-                                    JSONObject jsonObject = new JSONObject(response);
-                                    String dataFrom = jsonObject.getString("FROM");
-                                    String dataTo = jsonObject.getString("TO");
+                                    JSONArray jsonArray = new JSONArray(response);
+                                    JSONObject jsonObjectFrom = jsonArray.getJSONObject(0);
+                                    JSONObject jsonObjectTo = jsonArray.getJSONObject(1);
+                                    String dataFrom1 = jsonObjectFrom.getString("FROM");
+                                    double number = Double.parseDouble(dataFrom1);
+
+// Round the number to four decimal places
+                                    double roundedNumber = Math.round(number * 10000.0) / 10000.0;
+                                    String dataFrom = String.format("%.4f", roundedNumber);
+                                    String dataTo1 = jsonObjectTo.getString("TO");
+                                    double number2 = Double.parseDouble(dataTo1);
+
+// Round the number to four decimal places
+                                    double roundedNumber2 = Math.round(number2 * 10000.0) / 10000.0;
+                                    String dataTo = String.format("%.4f", roundedNumber2);
                                     from.setText(dataFrom);
                                     to.setText(dataTo);
 
